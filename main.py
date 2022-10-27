@@ -2,7 +2,10 @@ from random import randint
 
 
 def attack(char_name: str, char_class: str) -> str:
+<<<<<<< HEAD
     """Данная функция способностей атаки героев."""
+=======
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный'
                 f'{5 + randint(3, 5)}')
@@ -17,7 +20,10 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+<<<<<<< HEAD
     """Функция реализует свойства защиты героев."""
+=======
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     elif char_class == 'mage':
@@ -25,11 +31,18 @@ def defence(char_name: str, char_class: str) -> str:
     elif char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
     else:
+<<<<<<< HEAD
         ('Ошибка')
 
 
 def special(char_name: str, char_class: str) -> str:
     """Функция описывает специальные возможности героя."""
+=======
+        ('ошибка!')
+
+
+def special(char_name: str, char_class: str) -> str:
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение'
                 f'«Выносливость {80 + 25}»')
@@ -38,11 +51,18 @@ def special(char_name: str, char_class: str) -> str:
     elif char_class == 'healer':
         return (f'{char_name} применил специальное умение «Защита {10 + 30}»')
     else:
+<<<<<<< HEAD
         return ('Ошибка')
 
 
 def start_training(char_name: str, char_class: str) -> str:
     """Функция позволяет пропустить тренировочный процесс."""
+=======
+        return ('ошибка!')
+
+
+def start_training(char_name: str, char_class: str) -> str:
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     elif char_class == 'mage':
@@ -58,7 +78,10 @@ def start_training(char_name: str, char_class: str) -> str:
           'или special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
     cmd: str = None
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         if cmd == 'attack':
@@ -71,7 +94,10 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+<<<<<<< HEAD
     """Выбор персонажа."""
+=======
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
     approve_choice: str = None
     char_class: str = None
     while approve_choice != 'y':
@@ -94,4 +120,20 @@ def choice_char_class() -> str:
         approve_choice = input('Нажми (Y), чтобы подтвердить выбор,'
                                'или любую другую кнопку,'
                                'чтобы выбрать другого персонажа ').lower()
+<<<<<<< HEAD
     return char_class
+=======
+    return char_class
+
+
+def main() -> str:
+    print('Приветствую тебя, искатель приключений!')
+    print('Прежде чем начать игру...')
+    char_name: str = input('...назови себя: ')
+    print(f'Здравствуй, {char_name}! '
+          'Сейчас твоя выносливость — 80, атака — 5 и защита — 10.')
+    print('Ты можешь выбрать один из трёх путей силы:')
+    print('Воитель, Маг, Лекарь')
+    char_class: str = choice_char_class()
+    print(start_training(char_name, char_class))
+>>>>>>> d0f97bf67f1fb7e33125dc62ae8c3a238a1d78c8
